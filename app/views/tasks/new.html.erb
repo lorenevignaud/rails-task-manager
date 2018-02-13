@@ -1,0 +1,13 @@
+<h1>New task</h1>
+
+<%= form_for(@task) do |f| %>
+  <%= f.label :title, "Title" %>
+  <%= f.text_field :title, class: "form-control" %>
+  <%= f.label :details, "Details" %>
+  <%= f.text_field :details, class: "form-control" %>
+  <%= f.submit "Add the task", class: "btn btn-primary" %>
+<% end %>
+
+
+<p><i class="fas fa-undo-alt"></i> <%= link_to "Back to list", tasks_path %></p>
+
